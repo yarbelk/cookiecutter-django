@@ -36,22 +36,22 @@ class Common(Configuration):
         # Admin
         'django.contrib.admin',
     )
-    THIRD_PARTY_APPS = (
-        'crispy_forms',  # Form layouts
-        'avatar',  # for user avatars
-        'allauth',  # registration
-        'allauth.account',  # registration
-        'allauth.socialaccount',  # registration
-    )
+#    THIRD_PARTY_APPS = (
+#        'crispy_forms',  # Form layouts
+#        'avatar',  # for user avatars
+#        'allauth',  # registration
+#        'allauth.account',  # registration
+#        'allauth.socialaccount',  # registration
+#    )
 
     # Apps specific for this project go here.
     LOCAL_APPS = (
-        'users',  # custom users app
+#        'users',  # custom users app
         # Your stuff: custom apps go here
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
-    INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+    INSTALLED_APPS = DJANGO_APPS # + THIRD_PARTY_APPS + LOCAL_APPS
     # END APP CONFIGURATION
 
     # MIDDLEWARE CONFIGURATION
@@ -128,7 +128,7 @@ class Common(Configuration):
 
     # GENERAL CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-    TIME_ZONE = 'America/Los_Angeles'
+    TIME_ZONE = 'Asia/Singapore'
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
     LANGUAGE_CODE = 'en-us'
@@ -171,10 +171,6 @@ class Common(Configuration):
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
     )
-
-    # See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
-    CRISPY_TEMPLATE_PACK = 'bootstrap3'
-    # END TEMPLATE CONFIGURATION
 
     # STATIC FILE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
@@ -228,11 +224,7 @@ class Common(Configuration):
     LOGIN_REDIRECT_URL = "users:redirect"
     LOGIN_URL = "account_login"
     # END Custom user app defaults
-
-    # SLUGLIFIER
-    AUTOSLUG_SLUGIFY_FUNCTION = "slugify.slugify"
-    # END SLUGLIFIER
-
+    
     # LOGGING CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
     # A sample logging configuration. The only tangible logging
