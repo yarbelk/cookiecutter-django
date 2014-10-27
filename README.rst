@@ -5,7 +5,9 @@ cookiecutter-django
      :target: https://requires.io/github/pydanny/cookiecutter-django/requirements/?branch=master
      :alt: Requirements Status
 
-A cookiecutter_ template for Django.
+A cookiecutter_ template for Django and django-restframework.
+
+Really WIP - its not setup for DRF, and the configs are currently broken.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
